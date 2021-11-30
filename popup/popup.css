@@ -1,0 +1,135 @@
+body {
+  background: white;
+  font-family: 'Roboto', sans-serif;
+  min-width: 400px;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 50px;
+  width: 100%;
+  padding: 1rem;
+  background: rgb(11, 76, 100);
+  font-size: 30px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 300;
+  text-align: center;
+}
+
+.promoEditorPanel {
+  display: block;
+  height: auto;
+  background: white;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-content: flex-end;
+}
+
+.footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 16px;
+  height: 50px;
+  background: rgba(12, 56, 72, .45);
+  color: white;
+}
+
+.availableToEdit {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.availableToEdit h2 {
+  text-align: center;
+  margin-bottom: 12px;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.editRow {
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  align-content: stretch;
+}
+
+.editPanel h3 {
+  text-align: center;
+  font-weight: bold;
+  text-decoration: underline;
+  margin: 10px;
+}
+
+.editPanel {
+  width: 100%;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.status {
+  font-size: 24px;
+  text-align: center;
+}
+
+.status-positive {
+  color: green;
+}
+
+.status-negative {
+  color: red;
+}
+
+input {
+  display: block;
+  padding: 10px;
+}
+
+.inputField {
+  border-radius:10px;
+  width: 90%;
+  margin: 0px auto;
+  border: 1px solid rgb(155, 155, 155);
+  transition: .3s border-color;
+}
+
+.inputField:hover {
+  border: 1px solid rgb(0, 0, 0);
+}
+
+.footerButton {
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.actions {
+  margin: 10px 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100%;
+  align-items: center;
+  padding-bottom: 10px;
+}
+
+.actionButton {
+  border-radius: 10px;
+  background: rgb(11, 76, 100);
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.actionButton:hover {
+  background: rgba(12, 56, 72, .80);
+}

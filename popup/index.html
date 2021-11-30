@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Saatva Promos Visualizer</title>
+    <link href="index.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+    rel="stylesheet">
+    <link href="popup.css" rel="stylesheet">
+  </head>
+  <body>
+
+    <div class='header'>
+      <h2>Saatva Promotions</h2>
+    </div>
+    <div class='promoEditorPanel'>
+      <div class='availableToEdit'>
+        <h2>Available to Edit</h2>
+        <div class='editRow'>
+          <p>Sitewide Banner:</p>
+          <span class="material-icons-outlined status status-positive" id="sitewide-yes">check_circle</span>
+          <span class="material-icons-outlined status status-negative" id="sitewide-no">highlight_off</span>
+        </div>
+        <div class='editRow'>
+          <p>PDP Banner:</p>
+          <span class="material-icons-outlined status status-positive" id="pdp-yes">check_circle</span>
+          <span class="material-icons-outlined status status-negative" id="pdp-no">highlight_off</span>
+        </div>
+      </div>
+      <div class="sitewideBannerEdit editPanel">
+        <h3>Sitewide Banner</h3>
+        <input type='text' id='promoMsgInputSitewide' class='inputField' placeholder='Put your sitewide header copy here'/>
+      </div>
+      <div class="pdpBannerEdit editPanel">
+        <h3>PDP Banner</h3>
+        <input type='text' id='promoMsgInputPDP' class='inputField' placeholder='Put your PDP banner copy here' />
+      </div>
+    </div>
+    <div class='actions'>
+      <button class='actionButton' id='boldButton'>Bold Highlight</button>
+      <button class='actionButton' id='updateButton'>Preview</button>
+      <button class='actionButton' id='refreshButton'>Refresh</button>
+    </div>
+    <script src="./popup.js"></script>
+  </body>
+</html>
