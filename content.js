@@ -17,12 +17,13 @@ chrome.runtime.onMessage.addListener((msg, sender, response) => {
 
     switch (action) {
         case ('UPDATE_SITEWIDE_BANNER'): {            
-            if (sitewideBanner) {
+            if (sitewideBanner && sitewide !== '') {
                 sitewideBanner[1].outerHTML = `<span class='t-weight--normal'>${sitewide}</span>`
             }
-            if (pdpBanner) {
+            if (pdpBanner && pdp !== '') {
                 pdpBanner[0].outerHTML = `<span class='t-weight--normal'>${pdp}</span>`
             }
+            refreshReferences()
             break
         }
         case ('REQUEST_DOM_INFO'): {
@@ -42,6 +43,7 @@ chrome.runtime.onMessage.addListener((msg, sender, response) => {
                 pdpBanner[0].outerHTML = wrappedSelection
             }
             selection.anchorNode.firstChild.outerHTML = wrappedSelection
+            refreshReferences()
             break
         }
         default: {
@@ -50,3 +52,16 @@ chrome.runtime.onMessage.addListener((msg, sender, response) => {
         }
     }
 })
+
+const refreshReferences = () => {
+    sitewideBanner = document
+            ?.querySelector("section[data-selector='promo-sales-banner']")
+            ?.querySelector(".container")
+            ?.querySelector(".banner__content")
+            ?.getElementsByTagName("span")
+
+    pdpBanner = document
+            ?.querySelector(".bannerPDPDiscount__text")
+            ?.querySelector(".u-hidden--md-down")
+            ?.getElementsByTagName("span")
+}
